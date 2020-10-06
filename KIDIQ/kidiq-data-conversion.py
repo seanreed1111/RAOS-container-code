@@ -10,7 +10,8 @@ mom_iq = [float(df.mom_iq[i]) for i in df.index]
 mom_work = [int(df.mom_work[i]) for i in df.index]
 mom_age = [int(df.mom_age[i]) for i in df.index]
 
-kidiq = {'kid_score':kid_score, 
+kidiq = {'N':434, 'K':5,
+	'kid_score':kid_score, 
          'mom_hs':mom_hs,
          'mom_iq':mom_iq,
          'mom_work':mom_work ,
