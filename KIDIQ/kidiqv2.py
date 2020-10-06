@@ -2,7 +2,7 @@ import os
 import fire
 from cmdstanpy import cmdstan_path, CmdStanModel
 
-def run_model(model_name = 'kidiqv2.stan', data_name=None):
+def run_model(model_name = 'kidiqv2.stan', data_name='kidiq.json'):
 
     cwd = os.getcwd()
     model_path = os.path.join(cwd, model_name)

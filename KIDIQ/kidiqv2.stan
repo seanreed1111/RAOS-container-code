@@ -19,10 +19,13 @@ transformed data {
   matrix[K, K] R_ast_inverse;
   //combine vectors into matrices
   xT[1] = mom_hs;
-  xT[2] = mom_iq;  
+  xT[2] = mom_iq - mean(mom_iq);  
   xT[3] = mom_work;
-  xT[4] = mom_age;
+  xT[4] = mom_age - mean(mom_age);
+
+  // flip back into matrix of column vectors again
   x = xT';
+
   // thin and scale the QR decomposition
   Q_ast = qr_thin_Q(x) * sqrt(N - 1);
   R_ast = qr_thin_R(x) / sqrt(N - 1);
